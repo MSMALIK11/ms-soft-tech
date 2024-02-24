@@ -1,5 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
+:root {
+  --theme-color: #684DF4;
+  --title-color: #141D38;
+  --body-color: #737887;
+  --smoke-color: #F5F5F5;
+  --smoke-color2: #E2E8FA;
+  --black-color: #000000;
+  --black-color2: #080E1C;
+  --gray-color: #bdbdbd;
+  --white-color: #ffffff;
+  --light-color: #72849B;
+  --yellow-color: #FFB539;
+  --success-color: #28a745;
+  --error-color: #dc3545;
+  --th-border-color: #E0E0E0;
+  --title-font: 'Barlow', sans-serif;
+  --body-font: 'Roboto', sans-serif;
+  --icon-font: "Font Awesome 6 Pro";
+  --main-container: 1220px;
+  --container-gutters: 24px;
+  --section-space: 120px;
+  --section-space-mobile: 80px;
+  --section-title-space: 60px;
+  --ripple-ani-duration: 5s;
+}
 *{
   margin: 0;
   padding: 0;
@@ -75,10 +99,17 @@ animation: animate 0.9s  forwards infinite;
 }
 .banner-details{
   position: absolute;
-  top:50%;
+  top:30%;
   left: 100px;
-  width: 35%;
-  
+  animation: bannerDetailsNimate 0.6s ease-in;
+}
+@keyframes bannerDetailsNimate{
+  0%{
+
+    opacity: 0;
+    display: none;
+    left: -100px;
+  }
 }
 @media (max-width:825px) {
   .banner-details{
@@ -88,10 +119,10 @@ animation: animate 0.9s  forwards infinite;
 @media (max-width:625px) {
   .banner-details{
     top:10%;
-    width: 50%;
     
   }
 }
+
 .banner-details p{
   font-family: "Dancing Script", cursive !important;
   font-style: italic;
@@ -117,3 +148,191 @@ animation: animate 0.9s  forwards infinite;
 .banner-details h2 span:nth-of-type(3){
   background-color: #062252;
 }
+
+.contact-us-btn{
+  color: white;
+  border: 2px solid #ffe900;
+  padding: 5px 10px;
+  margin-top: 30px;
+  border-radius: 10px;
+  outline: none;
+}
+
+.service-card{
+  padding:10px 40px;
+  position: relative;
+  z-index: 2;
+  background-color:#fff;
+  border-radius: 10px;
+  overflow: hidden;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
+.shape-icon{
+  position: relative;
+    z-index: 2;
+    width: 70px;
+    height: 75px;
+    line-height: 85px;
+    text-align: center;
+}
+.shape-icon::before{
+  content: "";
+ position: absolute;
+width: 20px;
+height: 20px;
+background-color: var(--theme-color);
+border-radius: 50%;
+top: -7px;
+left: 40px;
+}
+.shape-icon::after{
+  content: "";
+ position: absolute;
+width: 10px;
+height: 10px;
+background-color: var(--theme-color);
+border-radius: 50%;
+
+left: 10px;
+bottom: 0;
+}
+.card-number{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 80px;
+  line-height: 1;
+  font-weight: bold;
+  color: var(--smoke-color2);
+  opacity: 0.1;
+}
+.service-card button{
+  background-color:#E2E8FA;
+  color: var(--title-color);
+  padding: 12.5px 20px;
+  box-shadow: none;
+  margin-top: 10px;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.service-card button:hover{
+  color: #fff;
+}
+.service-card button:before{
+ content:"";
+ position: absolute;
+ width: 100%;
+ height:0px;
+ border-radius:200px ;
+ left: 0;
+ top: 50%;
+ background-color: var(--theme-color);
+ transition: 0.4s ease-in;
+ z-index: -1;
+}
+.service-card button:hover::before{
+ content:"";
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ left: 0;
+ top: 0;
+ border-radius:0 ;
+ background-color: var(--black-color2);
+ transition: 0.4s ease-in;
+ z-index: -2;
+ 
+}
+.service-card::before{
+  position: absolute;
+  content: "";
+  right: -20px;
+  bottom: -80px;
+height: 110px;
+width: 110px;
+background-color:var(--theme-color);
+opacity: 0.6;
+border-radius: 50%;
+transition: 0.4s ease-in;
+}
+.service-card:hover::before{
+  position: absolute;
+  content: "";
+  right: 0;
+  bottom:0;
+height:180%;
+width:180%;
+background-color:var(--theme-color);
+opacity: 0.6;
+
+transition: 0.4s ease-in;
+z-index: -1;
+}
+.service-card::after{
+  position: absolute;
+  content: "";
+  right: -70px;
+  bottom: -40px;
+height: 110px;
+width: 110px;
+background-color:var(--theme-color);
+opacity: 0.6;
+border-radius: 50%;
+transition: 0.4s ease-in;
+}
+.service-card:hover::after{
+  position: absolute;
+  content: "";
+  right: 0;
+  bottom:0;
+height:180%;
+width:180%;
+background-color:var(--theme-color);
+opacity: 0.6;
+transition: 0.4s ease-in;
+z-index: -1;
+}
+.service-card:hover h1{
+  color: #fff;
+}
+
+
+.service-wraper{
+  background-image:url(./assets//icon/bgwave.png) ;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-color: var(--smoke-color);
+padding:50px 0;
+}
+.team-wraper{
+  background-image:url(./assets//icon/particle.png) ;
+  background-position: top center;
+  background-repeat: repeat;
+  background-size: auto;
+  background-color: var(--smoke-color);
+padding:50px 0;
+}
+.bg-shape{
+position: absolute;
+bottom: 0;
+z-index: -1;
+display: none;
+opacity: 0;
+transition: 0.4s ease-in;
+}
+.service-card:hover .bg-shape{
+display: block;
+opacity: 1;
+}
+/* Team Section Design */
+.team-image-box img{
+  aspect-ratio: 2/3;
+  object-fit: cover;
+}
+
+
+

@@ -5,13 +5,15 @@ const Header = () => {
             <div>
                 <img src={Logo} alt="" width={200} />
             </div>
-            <ul className='flex gap-6 text-white  sm:hidden hidden'>
-                <li className='text-orange-300 font-bold cursor-pointer'>Home</li>
-                <li>Product & Services</li>
-                <li>Pricing</li>
-                <li>Technology</li>
-                <li>Career</li>
-            </ul>
+            <div>
+                <ul className='flex gap-6 text-white'>
+                    <li className='text-orange-300 font-bold cursor-pointer'>Home</li>
+                    <li>Product & Services</li>
+                    <li>Pricing</li>
+                    <li>Technology</li>
+                    <li>Career</li>
+                </ul>
+            </div>
         </div>
     )
 }
