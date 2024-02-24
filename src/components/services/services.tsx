@@ -30,7 +30,7 @@ const Services = () => {
     ]
 
     return (
-        <div className='px-32 mt-12  h-[100vh] service-wraper'>
+        <div className='px-32 mt-12  min-h-[100vh] h-auto service-wraper'>
             <div className='flex  flex-col items-center justify-center'>
 
                 <Heading label="Our Services" isIcon={true} className='text-center text-[32px] font-bold mb-4 text-primary' />
