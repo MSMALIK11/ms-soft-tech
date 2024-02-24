@@ -4,8 +4,14 @@ import Heading from '../common/Heading'
 import webIcon from '../../assets/icon/web.svg'
 import softwareIcon from '../../assets/icon/software.svg'
 import uiux from '../../assets/icon/uiux.svg'
+
+interface SercviceProp {
+    title: string,
+    iconKey: string,
+    description: string
+}
 const Services = () => {
-    const services = [
+    const services: SercviceProp[] = [
         {
             title: 'Web Development',
             description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem ratione reiciendis sequi excepturi quaerat magni?',
@@ -33,7 +39,7 @@ const Services = () => {
             <div className='grid lg:grid-cols-3 mt-12  md:grid-cols-4 sm:grid-cols-6 place-content-center place-items-center gap-6'>
 
                 {
-                    services?.map((item) => <Card service={item} />)
+                    services?.map((item: SercviceProp) => <Card key={item.title} title={item.title} description={item.description} iconKey={item.iconKey} />)
                 }
             </div>
         </div>

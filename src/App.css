@@ -30,18 +30,18 @@
   font-family: "Roboto Slab", serif;
 }
 body{
+
   font-family: "Roboto Slab", serif;
 }
 .socialLnks ul {
   display: flex;
-  flex-direction: column;
-  gap: 20px;
+  gap: 5px;
 }
 .socialLnks ul>li {
-  background-color: #f9f7f7;
+  /* background-color: #f9f7f7; */
   width: 25px;
   height: 25px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  /* box-shadow: 0 0 10px rgba(0,0,0,0.1); */
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -329,10 +329,74 @@ display: block;
 opacity: 1;
 }
 /* Team Section Design */
+.team-image-box{
+  transition: 0.4s ease-in;
+  width: 100%;
+}
 .team-image-box img{
+
   aspect-ratio: 2/3;
   object-fit: cover;
+  border-radius: 10px;
+
 }
 
+.team-details{
+  box-shadow: 0px 10px 30px rgba(8, 14, 28, 0.06);
+  border-radius: 10px;
+  background-color: var(--white-color);
+  padding: 26px 10px;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+  position: relative;
+  z-index: 99999999 !important;
+  max-width: 208px;
+  margin: -55px auto 0 auto;
+  text-align: center;
+  position: relative;
+}
+.team-card{
+  overflow: hidden;
+}
+.team-card:hover .team-details{
+ box-shadow: 0 5px 10px  var(--theme-color);
+ background-color: var(--theme-color);
+ color: #fff;
+z-index: 9999 !important;
+}
+.team-card:hover .team-details h1{
+ color: #fff;
+ z-index: 9999 !important;
+}
 
+.team-social-links{
+  position: absolute;
+  background: #fff;
+  width:90%;
+  height:150px;
+  display: flex;
+ padding-top: 30px;
+  justify-content: center;
+  border-radius: 100% 100% 0px 0px;
+  bottom:-100px;
+  /* opacity: 0; */
+  bottom:-130px;
+  max-width: 200px;
+  margin: 0 auto;
+  left: 7%;
+  transition: 0.4s;
+  padding-bottom: 20px;
+}
+.team-card:hover .team-social-links{
+  bottom:15px;
+  opacity: 1;
+}
+/* .team-card:hover img{
+ transform: scale(1.1);
+} */
+@media(max-width:576px){
 
+  h1{
+font-size: 14px;
+  }
+}
