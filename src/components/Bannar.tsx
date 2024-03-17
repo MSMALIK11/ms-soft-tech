@@ -7,9 +7,6 @@ const Bannar = () => {
             <video controls={false} width={'100%'} loop muted autoPlay>
                 <source src={bgVideo} type="video/mp4" />
             </video>
-            {/* <div className='absolute top-20 left-5'>
-                <SocialLinks />
-            </div> */}
             <div className='chat-bot'>
                 <ChatBot />
             </div>
@@ -17,11 +14,11 @@ const Bannar = () => {
                 <CallToActionButton />
             </div>
             <div className='banner-details'>
-                <h1 className='text-[#ffe900] text-4xl'>Perfect It Solution </h1>
-                <h1 className='text-[#ffe900] text-4xl'>For Your Business </h1>
-                <h2 className='text-white text-md mt-1'>We Develop the Technology to Connect the World </h2>
+                <h1 className='text-brand lg:text-4xl md:text-2xl sm:text-lg'>Perfect It Solution </h1>
+                <h1 className='text-brand lg:text-4xl md:text-2xl sm:text-lg'>For Your Business </h1>
+                <h2 className='text-white lg:text-md sm:text-sm mt-1'>We Develop the Technology to Connect the World </h2>
                 <div>
-                    <button className='contact-us-btn'>Contact Us</button>
+                    <button className='border-2 border-brand  mt-6 bg-transparent hover:bg-brand text-white px-4  md:px-3 sm-px-2 py-2 rounded-full transition-color hover:border-white duration-300 hover:scale-110'>Contact Us</button>
                 </div>
             </div>
         </div>

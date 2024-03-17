@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 :root {
   --theme-color: #684DF4;
+  --brand:#0D47D5;
   --title-color: #141D38;
   --body-color: #737887;
   --smoke-color: #F5F5F5;
@@ -23,6 +24,7 @@
   --section-space-mobile: 80px;
   --section-title-space: 60px;
   --ripple-ani-duration: 5s;
+  
 }
 *{
   margin: 0;
@@ -32,6 +34,23 @@
 body{
 
   font-family: "Roboto Slab", serif;
+}
+.button-link{
+  color: var(--yellow-color);
+  background-color: transparent;
+  font-size: 18px;
+  transition: 0.2s ease-in;
+}
+.text-gradient {
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: linear-gradient(to right, #00C2FF, #DD0BFF);
+  
+  
+}
+.button-link:hover{
+ transform: scale(1.1);
 }
 .socialLnks ul {
   display: flex;
@@ -149,14 +168,7 @@ animation: animate 0.9s  forwards infinite;
   background-color: #062252;
 }
 
-.contact-us-btn{
-  color: white;
-  border: 2px solid #ffe900;
-  padding: 5px 10px;
-  margin-top: 30px;
-  border-radius: 10px;
-  outline: none;
-}
+
 
 .service-card{
   padding:10px 40px;
@@ -372,24 +384,25 @@ z-index: 9999 !important;
 .team-social-links{
   position: absolute;
   background: #fff;
-  width:90%;
+  width:85%;
   height:150px;
   display: flex;
  padding-top: 30px;
   justify-content: center;
   border-radius: 100% 100% 0px 0px;
-  bottom:-100px;
+  /* bottom:-100px; */
   /* opacity: 0; */
   bottom:-130px;
   max-width: 200px;
-  margin: 0 auto;
-  left: 7%;
+  /* margin: 0 auto; */
+  left: 50px;
   transition: 0.4s;
   padding-bottom: 20px;
 }
 .team-card:hover .team-social-links{
   bottom:15px;
   opacity: 1;
+ 
 }
 /* .team-card:hover img{
  transform: scale(1.1);
@@ -399,4 +412,194 @@ z-index: 9999 !important;
   h1{
 font-size: 14px;
   }
+}
+
+/* Achievements section design */
+.ach-section{
+  background-color: #FDF8F4;
+  background-position: top left;
+  background-image: url(./assets/icon/squarebg.png);
+  width: 100%;
+  min-height:70vh;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  background-repeat: no-repeat;
+  padding: 100px 0;
+  text-align: center;
+}
+.ach-subtitle{
+color: #e7253f;
+}
+.our-ach{
+  font-size:36px;
+  margin: 20px 0;
+
+}
+.inner-box{
+  width: 190px;
+  height: 190px;
+  margin: 0 auto;
+  padding-top: 22px;
+  border-radius: 100%;
+}
+.inner-border{
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  position: absolute;
+  border-radius: 100%;
+  border: 2px solid #fff;
+  animation-duration: 1500ms;
+  animation: rotate-anim 3s infinite linear;
+  /* animation-play-state: paused; */
+
+}
+
+.inner-border::before{
+  top: -6px;
+  left: 0;
+  right: 0;
+  content: "";
+  width: 12px;
+  height: 12px;
+  margin: 0 auto;
+  position: absolute;
+  border-radius: 100%;
+  background: linear-gradient(90deg, #feb0d6 0%, #fd60a9 100%);
+}
+.inner-border::after{
+
+  left: 70px;
+  right: 0;
+  content: "";
+  width: 12px;
+  height: 12px;
+  bottom: -6px;
+  /* margin: 0 auto; */
+  position: absolute;
+  border-radius: 100%;
+  background: linear-gradient(90deg, #feb0d6 0%, #fd60a9 100%);
+}
+.inner-border:hover::before,
+.inner-border:hover::after {
+  animation-play-state: running;
+}
+
+strong{
+  color: #000;
+  font-size: 40px;
+  line-height: 1;
+}
+
+@keyframes rotate-anim{
+  0%{
+      transform: rotate(0deg);
+      
+  }
+  100%{
+      transform: rotate(360deg);
+  }
+}
+
+.achivement-icon{
+  width: 65px;
+  height: 65px;
+  margin: 0 auto;
+  margin-bottom: 5px;
+}
+.achivement-icon img{
+width: 100%;
+height: 100%;
+object-fit: contain;
+}
+/* Design project sectin */
+
+.projectCard:hover .project-details{
+  visibility: visible;
+  opacity: 1;
+}
+
+.project-details{
+  position: absolute;
+top: 0;
+height: 140px;
+  z-index: 999;
+  color: #fff;
+  left: 50%;
+  transform: translate(-50%);
+  /* border: 3px solid #fff; */
+  margin: 0 auto;
+  display: flex;
+  border-radius: 10px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+ 
+/* visibility: hidden;
+opacity: 0; */
+transition: 0.2s ease-in;
+border: 3px solid #fff; 
+/* animation: border-animate 0.32s ease-in; */
+}
+.project-details:hover{
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(5px);
+}
+
+.project-inner-box{
+  position: relative;
+  width: 200px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  transition:width 0.2s ease-in;
+  border: 3px solid transparent; 
+  animation: border-animate 0.32s linear forwards; 
+
+   
+}
+
+.project-details:hover .project-inner-box{
+  border-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cstyle%3Epath%7Banimation:stroke 5s infinite linear%3B%7D%40keyframes stroke%7Bto%7Bstroke-dashoffset:776%3B%7D%7D%3C/style%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='0%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%232d3561' /%3E%3Cstop offset='25%25' stop-color='%23c05c7e' /%3E%3Cstop offset='50%25' stop-color='%23f3826f' /%3E%3Cstop offset='100%25' stop-color='%23ffb961' /%3E%3C/linearGradient%3E %3Cpath d='M1.5 1.5 l97 0l0 97l-97 0 l0 -97' stroke-linecap='square' stroke='url(%23g)' stroke-width='3' stroke-dasharray='388'/%3E %3C/svg%3E") 1;
+  
+}
+
+@keyframes border-animate {
+  0% {
+    border-width: 0;
+  }
+  25% {
+    border-top-width: 2px;
+    width: 100%;
+    border-top-width: 100%;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    border-color: #fff;
+  }
+  /* 50% {
+    border-top-width: 0;
+    border-right-width: 100%;
+    border-color: #fff;
+    border-bottom-width: 0;
+    border-left-width: 0;
+  }
+  75% {
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 100%;
+    border-left-width: 0;
+  }
+  100% {
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 100%;
+  } */
 }
